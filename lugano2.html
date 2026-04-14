@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lugano Café</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#f8f8f8;
+    color:#222;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#000,#1a1a1a);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    color:#D4AF37;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.order-btn{
+    background:#D4AF37;
+    padding:10px 25px;
+    border-radius:30px;
+    color:#000;
+    font-weight:bold;
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb');
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:60px;
+    font-family:'Playfair Display';
+}
+
+.hero p{
+    margin:20px 0;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:30px;
+    background:#D4AF37;
+    color:#000;
+    text-decoration:none;
+}
+
+/* Menu */
+.menu{
+    padding:100px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    font-family:'Playfair Display';
+    margin-bottom:40px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.menu-category{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid #D4AF37;
+    transition:0.4s;
+}
+
+.menu-category:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(212,175,55,0.3);
+}
+
+.category-image img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.category-content{
+    padding:20px;
+}
+
+.category-title{
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed #ccc;
+}
+
+.item-price{
+    color:#D4AF37;
+    font-weight:bold;
+}
+
+/* WhatsApp */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#25D366;
+    color:#fff;
+    padding:15px;
+    border-radius:50%;
+    font-size:25px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">Lugano ☕</div>
+
+<ul class="nav-links">
+<li><a href="#">home</a></li>
+<li><a href="#menu">menu</a></li>
+</ul>
+
+<a href="https://wa.me/201023288530?text=مرحبا، عايز أطلب من Lugano ☕" class="order-btn" target="_blank">
+order now
+</a>
+
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Lugano</h1>
+<p>the best coffee and desserts in your ismailia</p>
+
+<a href="https://wa.me/201023288530?text=عايز اطلب من Lugano" class="btn" target="_blank">
+order now
+</a>
+</div>
+</section>
+
+<section class="menu" id="menu">
+<h2 class="section-title">menu</h2>
+
+<div class="menu-grid">
+
+<!-- Hot Drinks -->
+<div class="menu-category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+</div>
+<div class="category-content">
+<h3 class="category-title">☕ coffe</h3>
+
+<div class="menu-item"><span>إسبريسو</span><span class="item-price">30 ج.م</span></div>
+<div class="menu-item"><span>كابتشينو</span><span class="item-price">45 ج.م</span></div>
+<div class="menu-item"><span>لاتيه</span><span class="item-price">50 ج.م</span></div>
+<div class="menu-item"><span>هوت شوكليت</span><span class="item-price">55 ج.م</span></div>
+
+</div>
+</div>
+
+<!-- Iced -->
+<div class="menu-category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+</div>
+<div class="category-content">
+<h3 class="category-title">🧊 آيس كوفي</h3>
+
+<div class="menu-item"><span>آيس لاتيه</span><span class="item-price">55 ج.م</span></div>
+<div class="menu-item"><span>آيس موكا</span><span class="item-price">60 ج.م</span></div>
+<div class="menu-item"><span>فرابتشينو</span><span class="item-price">70 ج.م</span></div>
+
+</div>
+</div>
+
+<!-- Coffee -->
+<div class="menu-category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+</div>
+<div class="category-content">
+<h3 class="category-title">☕ قهوة</h3>
+
+<div class="menu-item"><span>قهوة تركي</span><span class="item-price">30 ج.م</span></div>
+<div class="menu-item"><span>قهوة فرنساوي</span><span class="item-price">35 ج.م</span></div>
+<div class="menu-item"><span>قهوة بندق</span><span class="item-price">40 ج.م</span></div>
+<div class="menu-item"><span>قهوة بلبن</span><span class="item-price">35 ج.م</span></div>
+
+</div>
+</div>
+
+<!-- Desserts -->
+<div class="menu-category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
+</div>
+<div class="category-content">
+<h3 class="category-title">🍰 حلويات</h3>
+
+<div class="menu-item"><span>مولتن كيك</span><span class="item-price">65 ج.م</span></div>
+<div class="menu-item"><span>وافل </span><span class="item-price">50 ج.م</span></div>
+<div class="menu-item"><span>بان كيك</span><span class="item-price">70 ج.م</span></div>
+
+</div>
+</div>
+
+<!-- Hot Drinks -->
+<div class="menu-category">
+<div class="category-image">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+</div>
+
+<div class="category-content">
+<h3 class="category-title">☕ مشروبات ساخنة</h3>
+
+<div class="menu-item">
+<span>إسبريسو</span><span class="item-price">30 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>كابتشينو</span><span class="item-price">45 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>لاتيه</span><span class="item-price">50 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>هوت شوكليت</span><span class="item-price">55 ج.م</span>
+</div>
+
+<hr>
+
+<div class="menu-item">
+<span>شاي</span><span class="item-price">20 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>شاي أخضر</span><span class="item-price">25 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>شاي بالنعناع</span><span class="item-price">25 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>ينسون</span><span class="item-price">25 ج.م</span>
+</div>
+
+<div class="menu-item">
+<span>هوت سيدر</span><span class="item-price">30 ج.م</span>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<a href="https://wa.me/201023288530?text=عايز اطلب من Lugano ☕" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
